@@ -10,9 +10,10 @@
       content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-      content="Lorenzo Rosso - Corporate Finance & Financial Markets student">
-      
-<meta name="robots" content="noindex, nofollow, noarchive">
+      content="Lorenzo Rosso - Digital Business Card">
+
+<meta name="robots"
+      content="noindex, nofollow, noarchive">
 
 <title>Lorenzo Rosso</title>
 
@@ -23,15 +24,17 @@
         box-sizing: border-box;
     }
 
+
     html {
         scroll-behavior: smooth;
     }
+
 
     body {
         margin: 0;
         padding: 0;
 
-        background: #ffffff;
+        background: #f7f7f7;
         color: #000000;
 
         font-family:
@@ -40,31 +43,47 @@
             serif;
 
         font-size: 11pt;
-        line-height: 1.25;
+        line-height: 1.3;
     }
 
 
-    .page {
+    .card {
         width: 100%;
-        max-width: 900px;
+        max-width: 620px;
 
         margin: 0 auto;
 
-        padding: 45px 35px 55px;
+        padding: 35px 25px 40px;
     }
 
 
     /* =========================
-       NAME
+       HEADER
     ========================= */
 
-    .name {
+    .header {
+        background: #ffffff;
+
+        border: 1px solid #000000;
+
+        padding: 30px 25px;
+
         text-align: center;
+    }
 
-        font-size: 22px;
+
+    .name {
+        margin: 0;
+
+        font-size: 27px;
         font-weight: bold;
+    }
 
-        margin: 0 0 12px 0;
+
+    .subtitle {
+        margin-top: 7px;
+
+        font-size: 11pt;
     }
 
 
@@ -73,333 +92,125 @@
     ========================= */
 
     .section {
-        margin-top: 12px;
+        background: #ffffff;
+
+        border: 1px solid #000000;
+
+        margin-top: 14px;
+
+        padding: 22px 22px 20px;
     }
 
 
     .section-title {
-        display: flex;
+        margin: 0 0 16px 0;
 
-        align-items: center;
+        padding-bottom: 7px;
 
-        width: 100%;
-
-        margin: 0 0 8px 0;
+        border-bottom: 1px solid #000000;
 
         font-size: 10pt;
         font-weight: bold;
 
-        text-align: center;
+        text-transform: uppercase;
+
+        letter-spacing: 0.4px;
     }
 
 
-    .section-title::before,
-    .section-title::after {
-        content: "";
+    .section-name {
+        margin: 0;
 
-        flex: 1;
-
-        height: 1px;
-
-        background: #000000;
-    }
-
-
-    .section-title span {
-        padding: 0 12px;
-    }
-
-
-    /* =========================
-       EDUCATION
-    ========================= */
-
-    .education-entry {
-        margin-bottom: 6px;
-    }
-
-
-    .education-title {
-        font-size: 10.2pt;
+        font-size: 17px;
         font-weight: bold;
     }
 
 
-    .education-details {
-        margin-top: 0;
-    }
-
-
-    .education-achievement {
-        font-weight: bold;
-    }
-
-
-    .thesis {
+    .section-role {
         margin-top: 4px;
 
-        font-size: 9pt;
+        font-size: 11pt;
     }
 
 
-    .thesis-label {
+    .section-company {
+        margin-top: 3px;
+
+        font-size: 10.5pt;
         font-weight: bold;
     }
 
 
-    .thesis a {
+    .section-company a {
         color: #000000;
+
         text-decoration: none;
     }
 
 
-    .thesis a:hover {
+    .section-company a:hover {
         text-decoration: underline;
     }
 
 
-    .certificate-list {
-        margin-top: -2px;
-        margin-bottom: 0;
+    .section-description {
+        margin-top: 3px;
 
-        padding-left: 20px;
-
-        font-size: 9pt;
+        font-size: 10pt;
     }
 
 
-    .certificate-list li {
-        margin-bottom: 0;
-    }
+    /* =========================
+       EMAIL
+    ========================= */
 
+    .email {
+        display: inline-block;
 
-    .certificate-list a {
+        margin-top: 14px;
+
         color: #000000;
 
+        font-size: 10.5pt;
+
         text-decoration: none;
+
+        word-break: break-word;
     }
 
 
-    .certificate-list a:hover {
+    .email:hover {
         text-decoration: underline;
     }
 
 
     /* =========================
-       EXPERIENCE
+       ACTIONS
     ========================= */
 
-    .company {
-        margin-bottom: 8px;
+    .actions {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 18px;
     }
 
 
-    .company-name {
-        font-size: 10.2pt;
-        font-weight: bold;
-    }
+    .button {
+        display: inline-block;
 
-
-    .company-name a {
-        color: #000000;
-        text-decoration: none;
-    }
-
-
-    .company-name a:hover {
-        text-decoration: underline;
-    }
-
-
-    .company-division {
-        display: inline;
-    }
-
-
-    /*
-     * Timeline containing all positions
-     * within the same company.
-     */
-
-    .experience-timeline {
-        position: relative;
-
-        margin-left: 8px;
-        padding-left: 20px;
-    }
-
-
-    /*
-     * Vertical line connecting the positions.
-     */
-
-    .experience-timeline::before {
-        content: "";
-
-        position: absolute;
-
-        top: 5px;
-        bottom: 5px;
-        left: 3px;
-
-        width: 1px;
-
-        background: #777777;
-    }
-
-
-    .experience-item {
-        position: relative;
-
-        margin-bottom: 12px;
-    }
-
-
-    /*
-     * Timeline dot.
-     */
-
-    .experience-item::before {
-        content: "";
-
-        position: absolute;
-
-        left: -21px;
-        top: 5px;
-
-        width: 7px;
-        height: 7px;
+        padding: 9px 14px;
 
         border: 1px solid #000000;
 
         background: #ffffff;
 
-        border-radius: 50%;
-    }
-
-
-    /*
-     * Current position gets a solid dot.
-     */
-
-    .experience-item.current::before {
-        background: #000000;
-    }
-
-
-    .current-role {
-        margin-top: 0;
-    }
-
-
-    .role-title {
-        font-size: 10.2pt;
-        font-weight: bold;
-    }
-
-
-    .role-location,
-    .role-date {
-        display: block;
-    }
-
-
-    .role-description {
-        margin-top: 2px;
-
-        font-size: 10pt;
-
-        font-style: italic;
-    }
-
-
-    .assignment {
-        margin-top: 3px;
-
-        font-size: 9pt;
-    }
-
-
-    .assignment strong {
-        font-weight: bold;
-    }
-
-
-    /* =========================
-       PREVIOUS ROLES
-    ========================= */
-
-    .previous-role {
-        margin-bottom: 0;
-    }
-
-
-    .previous-role-title {
-        font-style: italic;
-    }
-
-
-    .previous-role-description {
-        margin-top: 2px;
-
-        font-size: 10pt;
-
-        font-style: italic;
-    }
-
-
-    .green-belt {
-        margin-top: 2px;
-
-        font-size: 9pt;
-    }
-
-
-    /* =========================
-       LANGUAGES
-    ========================= */
-
-    .languages {
-        margin-top: 6px;
-    }
-
-
-    .language {
-        margin-bottom: 2px;
-    }
-
-
-    .language strong {
-        font-weight: bold;
-    }
-
-
-    .language-details {
-        font-size: 9pt;
-    }
-
-
-    /* =========================
-       DOWNLOAD CV
-    ========================= */
-
-    .download-container {
-        text-align: center;
-
-        margin-top: 28px;
-    }
-
-
-    .download-button {
-        display: inline-block;
-
-        padding: 8px 15px;
-
-        border: 1px solid #000000;
-
         color: #000000;
-
-        text-decoration: none;
 
         font-family:
             Arial,
@@ -408,17 +219,40 @@
 
         font-size: 12px;
 
-        margin: 0 4px;
-
-        background: #ffffff;
+        text-decoration: none;
 
         cursor: pointer;
+
+        transition:
+            background 0.15s ease,
+            color 0.15s ease;
     }
 
 
-    .download-button:hover {
+    .button:hover {
         background: #000000;
+
         color: #ffffff;
+    }
+
+
+    button.button {
+        appearance: none;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        margin-top: 18px;
+
+        text-align: center;
+
+        font-size: 9pt;
+
+        color: #555555;
     }
 
 
@@ -429,87 +263,91 @@
     @media (max-width: 600px) {
 
         body {
-            font-size: 10.5pt;
+            background: #ffffff;
         }
 
 
-        .page {
+        .card {
             padding:
-                30px 20px 45px;
+                20px 15px 30px;
+        }
+
+
+        .header {
+            padding:
+                27px 18px;
         }
 
 
         .name {
-            font-size: 21px;
+            font-size: 25px;
         }
 
 
         .section {
-            margin-top: 11px;
+            padding:
+                20px 18px;
         }
 
 
-        .section-title {
-            font-size: 9.5pt;
+        .section-name {
+            font-size: 16px;
         }
 
 
-        .education-title,
-        .company-name,
-        .role-title {
-            font-size: 10pt;
+        .actions {
+            gap: 6px;
         }
 
 
-        .certificate-list {
-            padding-left: 18px;
-        }
-
-
-        .experience-timeline {
-            margin-left: 5px;
-            padding-left: 18px;
-        }
-
-
-        .experience-item::before {
-            left: -19px;
-        }
-
-
-        .download-button {
-            margin: 3px 2px;
+        .button {
+            padding:
+                9px 12px;
         }
 
     }
 
 </style>
+```
 
 </head>
 
 <script>
 
-async function shareCV() {
+async function addToContacts() {
+
+    const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:Lorenzo Rosso",
+        "N:Rosso;Lorenzo;;;",
+        "TITLE:European Pricing & Product Manager",
+        "ORG:CORTECO S.r.l.;a brand of Freudenberg",
+        "EMAIL;TYPE=WORK:lorenzo.rosso@corteco.it",
+        "EMAIL;TYPE=HOME:lorenzo.rosso921@edu.unito.it",
+        "URL:" + window.location.href,
+        "END:VCARD"
+    ].join("\r\n");
+
+
+    const blob = new Blob(
+        [vcard],
+        {
+            type: "text/vcard;charset=utf-8"
+        }
+    );
+
+
+    const file = new File(
+        [blob],
+        "Lorenzo_Rosso.vcf",
+        {
+            type: "text/vcard"
+        }
+    );
+
 
     try {
-
-        const response = await fetch("cv.pdf");
-
-        const blob = await response.blob();
-
-        const file = new File(
-            [blob],
-            "Lorenzo_Rosso_CV.pdf",
-            {
-                type: "application/pdf"
-            }
-        );
-
-
-        /*
-         * If the browser supports sharing files,
-         * open the native system share menu.
-         */
 
         if (
             navigator.share &&
@@ -520,28 +358,98 @@ async function shareCV() {
         ) {
 
             await navigator.share({
-                title: "Lorenzo Rosso - CV",
-                text: "Lorenzo Rosso - Curriculum Vitae",
+                title: "Lorenzo Rosso",
+                text: "Lorenzo Rosso - Contact",
                 files: [file]
             });
 
         } else {
 
-            /*
-             * Fallback for browsers that do not
-             * support file sharing.
-             */
+            const url =
+                URL.createObjectURL(blob);
 
-            window.location.href = "cv.pdf";
+            const link =
+                document.createElement("a");
+
+            link.href = url;
+
+            link.download =
+                "Lorenzo_Rosso.vcf";
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
+
+            URL.revokeObjectURL(url);
 
         }
 
     } catch (error) {
 
-        /*
-         * Ignore cancellation of the native
-         * share menu.
-         */
+        if (error.name !== "AbortError") {
+
+            console.error(
+                "Unable to create contact:",
+                error
+            );
+
+        }
+
+    }
+
+}
+
+
+async function shareCV() {
+
+    try {
+
+        const response =
+            await fetch("cv.pdf");
+
+        const blob =
+            await response.blob();
+
+        const file =
+            new File(
+                [blob],
+                "Lorenzo_Rosso_CV.pdf",
+                {
+                    type: "application/pdf"
+                }
+            );
+
+
+        if (
+            navigator.share &&
+            navigator.canShare &&
+            navigator.canShare({
+                files: [file]
+            })
+        ) {
+
+            await navigator.share({
+
+                title:
+                    "Lorenzo Rosso - CV",
+
+                text:
+                    "Lorenzo Rosso - Curriculum Vitae",
+
+                files: [file]
+
+            });
+
+        } else {
+
+            window.location.href =
+                "cv.pdf";
+
+        }
+
+    } catch (error) {
 
         if (error.name !== "AbortError") {
 
@@ -550,7 +458,56 @@ async function shareCV() {
                 error
             );
 
-            window.location.href = "cv.pdf";
+            window.location.href =
+                "cv.pdf";
+
+        }
+
+    }
+
+}
+
+
+async function shareCard() {
+
+    try {
+
+        if (navigator.share) {
+
+            await navigator.share({
+
+                title:
+                    "Lorenzo Rosso",
+
+                text:
+                    "Lorenzo Rosso - Digital Business Card",
+
+                url:
+                    window.location.href
+
+            });
+
+        } else {
+
+            await navigator.clipboard.writeText(
+                window.location.href
+            );
+
+            alert(
+                "Business card link copied."
+            );
+
+        }
+
+    } catch (error) {
+
+        if (error.name !== "AbortError") {
+
+            console.error(
+                "Unable to share business card:",
+                error
+            );
+
         }
 
     }
@@ -561,447 +518,142 @@ async function shareCV() {
 
 <body>
 
-<div class="page">
+<div class="card">
 
+```
 <!-- =========================
-     NAME
+     HEADER
 ========================= -->
 
-<div class="name">
-    Lorenzo Rosso
-</div>
+<header class="header">
+
+    <h1 class="name">
+        Lorenzo Rosso
+    </h1>
+
+    <div class="subtitle">
+        Corporate Finance &amp; Financial Markets
+    </div>
+
+</header>
 
 
 
 <!-- =========================
-     EDUCATION
-========================= -->
-
-<section class="section">
-
-    <div class="section-title">
-        <span>Education</span>
-    </div>
-
-
-    <div class="education-entry">
-
-        <div class="education-title">
-
-            Master Degree (Laurea Magistrale) -
-            Corporate Finance &amp; Financial Markets (LM-77)
-
-        </div>
-
-
-        <div class="education-details">
-
-            School of Management and Economics,
-            Università degli Studi di Torino
-
-        </div>
-
-
-        <div class="education-details">
-
-            September 2025 -- Present
-
-        </div>
-
-    </div>
-
-
-    <div class="education-entry">
-
-        <div class="education-title">
-
-            Bachelor Degree (Laurea Triennale) -
-            Business Administration &amp; Management (L-18)
-
-        </div>
-
-
-        <div class="education-details">
-
-            School of Management and Economics,
-            Università degli Studi di Torino
-
-        </div>
-
-
-        <div class="education-details">
-
-            September 2022 – July 2025
-
-        </div>
-
-
-        <div class="education-achievement">
-
-            Graduated with 110/110 cum Laude
-
-        </div>
-
-
-        <div class="thesis">
-
-            <span class="thesis-label">
-                Thesis:
-            </span>
-
-            <a
-                href="https://hdl.handle.net/20.500.14240/172897"
-                target="_blank"
-                rel="noopener"
-            >
-                "Hostile Takeovers and Main Defense Mechanisms:
-                Framework, Regulatory Aspects, and Distinctive Features"
-            </a>
-
-        </div>
-
-
-        <ul class="certificate-list">
-
-            <li>
-
-                <a
-                    href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
-                    target="_blank"
-                    rel="noopener"
-                >
-
-                    Mergers and Acquisitions /
-                    University of Illinois Urbana-Champaign,
-                    Coursera (April 2024)
-
-                </a>
-
-            </li>
-
-
-            <li>
-
-                <a
-                    href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
-                    target="_blank"
-                    rel="noopener"
-                >
-
-                    Private Equity and Venture Capital /
-                    Bocconi University,
-                    Coursera (October 2024)
-
-                </a>
-
-            </li>
-
-        </ul>
-
-    </div>
-
-
-    <div class="education-entry">
-
-        <div class="education-title">
-
-            High School - Traditional scientific diploma
-
-        </div>
-
-
-        <div class="education-details">
-
-            Liceo Scientifico “Maria Curie”
-            (scientific high-school)
-
-        </div>
-
-
-        <div class="education-details">
-
-            September 2016 – July 2021
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     PROFESSIONAL EXPERIENCE
+     UNIVERSITY
 ========================= -->
 
 <section class="section">
 
     <div class="section-title">
-
-        <span>
-            Professional Experience
-        </span>
-
+        University
     </div>
 
 
-    <!-- COMPANY -->
+    <h2 class="section-name">
+        Lorenzo Rosso
+    </h2>
 
-    <div class="company">
 
-        <span class="company-name">
-
-            <a
-                href="https://www.corteco.com/"
-                target="_blank"
-                rel="noopener"
-            >
-                CORTECO
-            </a>
-
-            –
-
-            <a
-                href="https://www.freudenberg.com/en"
-                target="_blank"
-                rel="noopener"
-            >
-                Freudenberg Sealing Technologies
-            </a>
-
-        </span>
-
-        -
-
-        <span class="company-division">
-
-            Independent Automotive Aftermarket's
-            Division (B2B)
-
-        </span>
-
+    <div class="section-role">
+        Corporate Finance &amp; Financial Markets
     </div>
 
 
-    <!-- EXPERIENCE TIMELINE -->
+    <div class="section-company">
 
-    <div class="experience-timeline">
-
-
-        <!-- CURRENT ROLE -->
-
-        <div class="experience-item current">
-
-            <div class="current-role">
-
-                <div class="role-title">
-
-                    European Pricing &amp; Product Manager
-
-                </div>
-
-
-                <div class="role-location">
-
-                    Pinerolo (TO), Italian Office
-
-                </div>
-
-
-                <div class="role-date">
-
-                    April 2026 -- Present
-
-                </div>
-
-
-                <div class="role-description">
-
-                    Pricing Model, Analysis Tool &amp; KPI Deployment,
-                    alongside sales support and reporting activities.
-
-                </div>
-
-
-                <div class="assignment">
-
-                    <strong>
-
-                        6 Week International Assignment -
-                        French Branch (April to June 2026)
-
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT MANAGEMENT SUPPORT -->
-
-        <div class="experience-item">
-
-            <div class="previous-role">
-
-                <span class="previous-role-title">
-
-                    Product Management Support
-
-                </span>
-
-                <br>
-
-                May 2025 – March 2026
-
-
-                <div class="previous-role-description">
-
-                    Pricing Model Development alongside
-                    sales support and reporting activities
-
-                </div>
-
-
-                <div class="green-belt">
-
-                    Green Belt – Lean Administration
-                    (February 2026)
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- EXTRACURRICULAR INTERNSHIP -->
-
-        <div class="experience-item">
-
-            <div class="previous-role">
-
-                <span class="previous-role-title">
-
-                    Product Management – Extracurricular Internship
-
-                </span>
-
-                <br>
-
-                November 2024 – May 2025
-
-            </div>
-
-        </div>
-
-
-        <!-- CURRICULAR INTERNSHIP -->
-
-        <div class="experience-item">
-
-            <div class="previous-role">
-
-                <span class="previous-role-title">
-
-                    Curricular Internship
-
-                </span>
-
-                <br>
-
-                September 2024 – November 2024
-
-            </div>
-
-        </div>
-
+        Università degli Studi di Torino
 
     </div>
 
-</section>
-
-
-
-<!-- =========================
-     LANGUAGES
-========================= -->
-
-<section class="section">
-
-    <div class="section-title">
-
-        <span>
-            Languages
-        </span>
-
-    </div>
-
-
-    <div class="languages">
-
-
-        <div class="language">
-
-            <strong>
-                English
-            </strong>
-
-            <span class="language-details">
-
-                - B2, Cambridge First-level Certificate,
-                ID: 950964YHN (October 2020)
-
-            </span>
-
-        </div>
-
-
-        <div class="language">
-
-            <strong>
-                French
-            </strong>
-
-            <span class="language-details">
-
-                - A2, Basic Proficiency
-
-            </span>
-
-        </div>
-
-
-        <div class="language">
-
-            <strong>
-                Italian
-            </strong>
-
-            <span class="language-details">
-
-                - Native Language
-
-            </span>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     DOWNLOAD CV
-========================= -->
-
-<div class="download-container">
 
     <a
-        class="download-button"
+        class="email"
+        href="mailto:lorenzo.rosso921@edu.unito.it"
+    >
+        ✉ lorenzo.rosso921@edu.unito.it
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     PROFESSIONAL
+========================= -->
+
+<section class="section">
+
+    <div class="section-title">
+        Professional
+    </div>
+
+
+    <h2 class="section-name">
+        Lorenzo Rosso
+    </h2>
+
+
+    <div class="section-role">
+
+        European Pricing &amp; Product Manager
+
+    </div>
+
+
+    <div class="section-company">
+
+        <a
+            href="https://www.corteco.com/"
+            target="_blank"
+            rel="noopener"
+        >
+            CORTECO S.r.l.
+        </a>
+
+        — a brand of Freudenberg
+
+    </div>
+
+
+    <a
+        class="email"
+        href="mailto:lorenzo.rosso@corteco.it"
+    >
+        ✉ lorenzo.rosso@corteco.it
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     ACTIONS
+========================= -->
+
+<div class="actions">
+
+
+    <button
+        class="button"
+        type="button"
+        onclick="addToContacts()"
+    >
+        Add to Contacts
+    </button>
+
+
+    <button
+        class="button"
+        type="button"
+        onclick="shareCard()"
+    >
+        Share
+    </button>
+
+
+    <a
+        class="button"
         href="cv.pdf"
         download="Lorenzo_Rosso_CV.pdf"
     >
@@ -1010,21 +662,20 @@ async function shareCV() {
 
 
     <a
-        class="download-button"
+        class="button"
         href="cv-short.pdf"
         download="Lorenzo_Rosso_Short_CV.pdf"
     >
-        Download Short CV
+        Short CV
     </a>
 
+</div>
 
-    <button
-        class="download-button"
-        type="button"
-        onclick="shareCV()"
-    >
-        Share CV
-    </button>
+
+
+<div class="footer">
+
+    Lorenzo Rosso · Digital Business Card
 
 </div>
 
