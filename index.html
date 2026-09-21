@@ -9,198 +9,59 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Lorenzo Rosso — Corporate Finance & Financial Markets student and pricing professional.">
+          content="Lorenzo Rosso - Corporate Finance & Financial Markets student">
 
-    <title>Lorenzo Rosso | Economics & Finance</title>
+    <title>Lorenzo Rosso</title>
 
 
     <style>
-
-        :root {
-            --text: #171717;
-            --muted: #666666;
-            --line: #d8d8d8;
-            --accent: #18324a;
-            --background: #ffffff;
-            --max-width: 900px;
-        }
-
 
         * {
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
             margin: 0;
+            padding: 0;
 
-            background: var(--background);
-
-            color: var(--text);
+            background: #ffffff;
+            color: #000000;
 
             font-family:
-                Georgia,
                 "Times New Roman",
+                Times,
                 serif;
 
-            line-height: 1.55;
-        }
-
-
-        a {
-            color: inherit;
+            font-size: 11pt;
+            line-height: 1.25;
         }
 
 
         .page {
-
-            width:
-                min(
-                    calc(100% - 40px),
-                    var(--max-width)
-                );
+            width: 100%;
+            max-width: 900px;
 
             margin: 0 auto;
 
-            padding:
-                55px 0 70px;
+            padding: 45px 35px 55px;
         }
 
 
         /* =========================
-           HEADER
+           NAME
         ========================= */
 
-        header {
-
+        .name {
             text-align: center;
 
-            padding-bottom: 34px;
+            font-size: 24px;
+            font-weight: bold;
 
-            border-bottom:
-                1px solid var(--line);
-        }
-
-
-        h1 {
-
-            margin: 0;
-
-            font-size:
-                clamp(
-                    2.3rem,
-                    6vw,
-                    3.5rem
-                );
-
-            letter-spacing: -0.03em;
-
-            font-weight: 700;
-        }
-
-
-        .subtitle {
-
-            margin:
-                8px 0 18px;
-
-            color: var(--muted);
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 1.05rem;
-        }
-
-
-        .contact {
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap:
-                8px 18px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.88rem;
-        }
-
-
-        .contact a {
-
-            text-decoration: none;
-
-            border-bottom:
-                1px solid transparent;
-        }
-
-
-        .contact a:hover {
-
-            border-bottom-color:
-                var(--accent);
-        }
-
-
-        /* =========================
-           CV BUTTON
-        ========================= */
-
-        .cv-button {
-
-            display: inline-block;
-
-            margin-top: 22px;
-
-            padding:
-                9px 17px;
-
-            border:
-                1px solid var(--accent);
-
-            color:
-                var(--accent);
-
-            text-decoration: none;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.82rem;
-
-            font-weight: 700;
-
-            letter-spacing: 0.02em;
-
-            transition:
-                0.2s ease;
-        }
-
-
-        .cv-button:hover {
-
-            background:
-                var(--accent);
-
-            color:
-                white;
+            margin: 0 0 12px 0;
         }
 
 
@@ -208,53 +69,41 @@
            SECTIONS
         ========================= */
 
-        section {
-
-            margin-top: 40px;
+        .section {
+            margin-top: 12px;
         }
 
 
-        h2 {
-
-            margin:
-                0 0 21px;
-
-            text-align: center;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.95rem;
-
-            letter-spacing:
-                0.12em;
-
-            text-transform:
-                uppercase;
-
-            font-weight: 700;
-
+        .section-title {
             display: flex;
 
             align-items: center;
 
-            gap: 14px;
+            width: 100%;
+
+            margin: 0 0 8px 0;
+
+            font-size: 11pt;
+            font-weight: bold;
+
+            text-align: center;
         }
 
 
-        h2::before,
-        h2::after {
-
+        .section-title::before,
+        .section-title::after {
             content: "";
+
+            flex: 1;
 
             height: 1px;
 
-            background:
-                var(--line);
+            background: #000000;
+        }
 
-            flex: 1;
+
+        .section-title span {
+            padding: 0 12px;
         }
 
 
@@ -262,98 +111,73 @@
            EDUCATION
         ========================= */
 
-        .entry {
-
-            margin-bottom:
-                25px;
+        .education-entry {
+            margin-bottom: 6px;
         }
 
 
-        .entry:last-child {
+        .education-title {
+            font-weight: bold;
+        }
 
+
+        .education-details {
+            margin-top: 0;
+        }
+
+
+        .education-achievement {
+            font-weight: bold;
+        }
+
+
+        .thesis {
+            margin-top: 4px;
+
+            font-size: 9pt;
+        }
+
+
+        .thesis-label {
+            font-weight: bold;
+        }
+
+
+        .thesis a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+
+        .thesis a:hover {
+            text-decoration: underline;
+        }
+
+
+        .certificate-list {
+            margin-top: -2px;
+            margin-bottom: 0;
+
+            padding-left: 20px;
+
+            font-size: 9pt;
+        }
+
+
+        .certificate-list li {
             margin-bottom: 0;
         }
 
 
-        .entry-title {
-
-            font-weight: 700;
-
-            font-size: 1.02rem;
-        }
-
-
-        .entry-title a {
+        .certificate-list a {
+            color: #000000;
 
             text-decoration: none;
         }
 
 
-        .entry-title a:hover {
-
-            text-decoration:
-                underline;
-        }
-
-
-        .meta {
-
-            color:
-                var(--muted);
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 0.82rem;
-
-            margin-top: 3px;
-        }
-
-
-        .details {
-
-            margin-top: 8px;
-
-            font-size: 0.92rem;
-        }
-
-
-        .details ul {
-
-            margin:
-                7px 0 0 20px;
-
-            padding: 0;
-        }
-
-
-        .details li {
-
-            margin:
-                4px 0;
-        }
-
-
-        .details a {
-
-            text-decoration:
-                none;
-        }
-
-
-        .details a:hover {
-
-            text-decoration:
-                underline;
-        }
-
-
-        .small {
-
-            font-size:
-                0.86rem;
+        .certificate-list a:hover {
+            text-decoration: underline;
         }
 
 
@@ -361,129 +185,117 @@
            EXPERIENCE
         ========================= */
 
-        .experience-company {
-
-            margin-bottom:
-                17px;
+        .company {
+            margin-bottom: 2px;
         }
 
 
         .company-name {
-
-            font-weight: 700;
-
-            font-size:
-                1.05rem;
+            font-weight: bold;
         }
 
 
         .company-name a {
-
-            text-decoration:
-                none;
+            color: #000000;
+            text-decoration: none;
         }
 
 
         .company-name a:hover {
-
-            text-decoration:
-                underline;
+            text-decoration: underline;
         }
 
 
         .company-division {
-
-            color:
-                var(--muted);
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.82rem;
-
-            margin-top:
-                3px;
+            display: inline;
         }
 
 
-        .role {
-
-            margin:
-                20px 0 0 18px;
-
-            padding-left:
-                18px;
-
-            border-left:
-                1px solid var(--line);
-        }
-
-
-        .role:first-of-type {
-
-            margin-top:
-                12px;
+        .current-role {
+            margin-top: 2px;
         }
 
 
         .role-title {
-
-            font-weight:
-                700;
-
-            font-size:
-                0.98rem;
+            font-weight: bold;
         }
 
 
+        .role-location,
         .role-date {
-
-            color:
-                var(--muted);
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size:
-                0.80rem;
-
-            margin-top:
-                2px;
+            display: block;
         }
 
 
         .role-description {
+            margin-top: 2px;
 
-            margin-top:
-                7px;
+            font-size: 10pt;
 
-            font-size:
-                0.88rem;
-
-            font-style:
-                italic;
+            font-style: italic;
         }
 
 
         .assignment {
+            margin-top: 2px;
 
-            margin-top:
-                8px;
-
-            font-size:
-                0.84rem;
+            font-size: 9pt;
         }
 
 
         .assignment strong {
+            font-weight: bold;
+        }
 
-            font-style:
-                normal;
+
+        /* =========================
+           PREVIOUS ROLES
+        ========================= */
+
+        .experience-level-2 {
+            margin-top: 0;
+
+            padding-left: 20px;
+        }
+
+
+        .experience-level-3 {
+            margin-top: 2px;
+
+            padding-left: 20px;
+        }
+
+
+        .experience-level-4 {
+            margin-top: 8px;
+
+            padding-left: 20px;
+        }
+
+
+        .previous-role {
+            margin-bottom: 0;
+        }
+
+
+        .previous-role-title {
+            font-style: italic;
+        }
+
+
+        .previous-role-description {
+            margin-top: 0;
+
+            font-size: 10pt;
+
+            font-style: italic;
+        }
+
+
+        .green-belt {
+            margin-top: 2px;
+
+            font-size: 9pt;
         }
 
 
@@ -491,44 +303,60 @@
            LANGUAGES
         ========================= */
 
+        .languages {
+            margin-top: 6px;
+        }
+
+
         .language {
+            margin-bottom: 2px;
+        }
 
-            margin-bottom:
-                6px;
 
-            font-size:
-                0.92rem;
+        .language strong {
+            font-weight: bold;
+        }
+
+
+        .language-details {
+            font-size: 9pt;
         }
 
 
         /* =========================
-           FOOTER
+           DOWNLOAD CV
         ========================= */
 
-        footer {
+        .download-container {
+            text-align: center;
 
-            margin-top:
-                55px;
+            margin-top: 28px;
+        }
 
-            padding-top:
-                18px;
 
-            border-top:
-                1px solid var(--line);
+        .download-button {
+            display: inline-block;
 
-            text-align:
-                center;
+            padding: 8px 15px;
 
-            color:
-                var(--muted);
+            border: 1px solid #000000;
+
+            color: #000000;
+
+            text-decoration: none;
 
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            font-size:
-                0.75rem;
+            font-size: 12px;
+        }
+
+
+        .download-button:hover {
+            background: #000000;
+            color: #ffffff;
         }
 
 
@@ -538,54 +366,36 @@
 
         @media (max-width: 600px) {
 
+            body {
+                font-size: 10.5pt;
+            }
+
+
             .page {
-
-                width:
-                    min(
-                        calc(100% - 28px),
-                        var(--max-width)
-                    );
-
-                padding-top:
-                    35px;
+                padding:
+                    30px 20px 45px;
             }
 
 
-            section {
-
-                margin-top:
-                    34px;
+            .name {
+                font-size: 22px;
             }
 
 
-            .entry-title {
-
-                font-size:
-                    0.97rem;
+            .section {
+                margin-top: 11px;
             }
 
 
-            .details {
-
-                font-size:
-                    0.88rem;
+            .certificate-list {
+                padding-left: 18px;
             }
 
 
-            .role {
-
-                margin-left:
-                    8px;
-
-                padding-left:
-                    14px;
-            }
-
-
-            .company-name {
-
-                font-size:
-                    1rem;
+            .experience-level-2,
+            .experience-level-3,
+            .experience-level-4 {
+                padding-left: 16px;
             }
 
         }
@@ -598,49 +408,16 @@
 <body>
 
 
-<main class="page">
+<div class="page">
 
 
     <!-- =========================
-         HEADER
+         NAME
     ========================= -->
 
-    <header>
-
-        <h1>
-            Lorenzo Rosso
-        </h1>
-
-
-        <div class="subtitle">
-
-            Economics &amp; Finance Student
-
-        </div>
-
-
-        <div class="contact">
-
-            <a href="mailto:lorenzo.rosso921@edu.unito.it">
-
-                lorenzo.rosso921@edu.unito.it
-
-            </a>
-
-        </div>
-
-
-        <a
-            class="cv-button"
-            href="cv.pdf"
-            download
-        >
-
-            Download CV
-
-        </a>
-
-    </header>
+    <div class="name">
+        Lorenzo Rosso
+    </div>
 
 
 
@@ -648,18 +425,16 @@
          EDUCATION
     ========================= -->
 
-    <section>
+    <section class="section">
 
-        <h2>
-            Education
-        </h2>
+        <div class="section-title">
+            <span>Education</span>
+        </div>
 
 
-        <!-- MASTER -->
+        <div class="education-entry">
 
-        <div class="entry">
-
-            <div class="entry-title">
+            <div class="education-title">
 
                 Master Degree (Laurea Magistrale) -
                 Corporate Finance &amp; Financial Markets (LM-77)
@@ -667,32 +442,26 @@
             </div>
 
 
-            <div class="meta">
+            <div class="education-details">
 
-                <a
-                    href="https://www.unito.it/"
-                    target="_blank"
-                    rel="noopener"
-                >
+                School of Management and Economics,
+                Università degli Studi di Torino
 
-                    School of Management and Economics,
-                    Università degli Studi di Torino
+            </div>
 
-                </a>
 
-                · September 2025 --
+            <div class="education-details">
+
+                September 2025 -- Present
 
             </div>
 
         </div>
 
 
+        <div class="education-entry">
 
-        <!-- BACHELOR -->
-
-        <div class="entry">
-
-            <div class="entry-title">
+            <div class="education-title">
 
                 Bachelor Degree (Laurea Triennale) -
                 Business Administration &amp; Management (L-18)
@@ -700,121 +469,106 @@
             </div>
 
 
-            <div class="meta">
+            <div class="education-details">
 
-                <a
-                    href="https://www.unito.it/"
-                    target="_blank"
-                    rel="noopener"
-                >
-
-                    School of Management and Economics,
-                    Università degli Studi di Torino
-
-                </a>
-
-                · September 2022 – July 2025
+                School of Management and Economics,
+                Università degli Studi di Torino
 
             </div>
 
 
-            <div class="details">
+            <div class="education-details">
 
-                <strong>
-                    Graduated with 110/110 cum Laude
-                </strong>
+                September 2022 – July 2025
 
             </div>
 
 
-            <div class="details small">
+            <div class="education-achievement">
 
-                <strong>
+                Graduated with 110/110 cum Laude
+
+            </div>
+
+
+            <div class="thesis">
+
+                <span class="thesis-label">
                     Thesis:
-                </strong>
-
+                </span>
 
                 <a
                     href="https://hdl.handle.net/20.500.14240/172897"
                     target="_blank"
                     rel="noopener"
                 >
-
                     "Hostile Takeovers and Main Defense Mechanisms:
                     Framework, Regulatory Aspects, and Distinctive Features"
-
                 </a>
 
             </div>
 
 
-            <div class="details small">
+            <ul class="certificate-list">
 
-                <ul>
+                <li>
 
-                    <li>
+                    <a
+                        href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
+                        target="_blank"
+                        rel="noopener"
+                    >
 
-                        <a
-                            href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
-                            target="_blank"
-                            rel="noopener"
-                        >
+                        Mergers and Acquisitions /
+                        University of Illinois Urbana-Champaign,
+                        Coursera (April 2024)
 
-                            Mergers and Acquisitions
+                    </a>
 
-                        </a>
-
-                        / University of Illinois
-                        Urbana-Champaign, Coursera
-                        (April 2024)
-
-                    </li>
+                </li>
 
 
-                    <li>
+                <li>
 
-                        <a
-                            href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
-                            target="_blank"
-                            rel="noopener"
-                        >
+                    <a
+                        href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
+                        target="_blank"
+                        rel="noopener"
+                    >
 
-                            Private Equity and Venture Capital
+                        Private Equity and Venture Capital /
+                        Bocconi University,
+                        Coursera (October 2024)
 
-                        </a>
+                    </a>
 
-                        / Bocconi University,
-                        Coursera
-                        (October 2024)
+                </li>
 
-                    </li>
-
-                </ul>
-
-            </div>
+            </ul>
 
         </div>
 
 
+        <div class="education-entry">
 
-        <!-- HIGH SCHOOL -->
+            <div class="education-title">
 
-        <div class="entry">
-
-            <div class="entry-title">
-
-                High school traditional scientific diploma
+                High School - Traditional scientific diploma
 
             </div>
 
 
-            <div class="meta">
+            <div class="education-details">
 
-                Liceo Scientifico
-                “Maria Curie”
+                Liceo Scientifico “Maria Curie”
                 (scientific high-school)
 
-                · September 2016 – July 2021
+            </div>
+
+
+            <div class="education-details">
+
+                September 2016 – July 2021
 
             </div>
 
@@ -825,22 +579,25 @@
 
 
     <!-- =========================
-         EXPERIENCE
+         PROFESSIONAL EXPERIENCE
     ========================= -->
 
-    <section>
+    <section class="section">
 
-        <h2>
-            Professional Experience
-        </h2>
+        <div class="section-title">
+
+            <span>
+                Professional Experience
+            </span>
+
+        </div>
 
 
-        <div class="experience-company">
+        <!-- COMPANY -->
 
+        <div class="company">
 
-            <!-- COMPANY -->
-
-            <div class="company-name">
+            <span class="company-name">
 
                 <a
                     href="https://www.corteco.com/"
@@ -860,93 +617,101 @@
                     Freudenberg Sealing Technologies
                 </a>
 
-            </div>
+            </span>
 
+            -
 
-            <div class="company-division">
+            <span class="company-division">
 
                 Independent Automotive Aftermarket's
                 Division (B2B)
 
-            </div>
+            </span>
+
+        </div>
 
 
+        <!-- LEVEL 1 -->
 
-            <!-- ROLE 1 -->
+        <div class="current-role">
 
-            <div class="role">
+            <div class="role-title">
 
-                <div class="role-title">
-
-                    European Pricing &amp; Product Manager
-
-                </div>
-
-
-                <div class="role-date">
-
-                    Pinerolo (TO), Italian Office
-                    · April 2026 --
-
-                </div>
-
-
-                <div class="role-description">
-
-                    Pricing Model, Analysis Tool &amp;
-                    KPI Deployment, alongside sales support
-                    and reporting activities.
-
-                </div>
-
-
-                <div class="assignment">
-
-                    <strong>
-                        6 Week International Assignment -
-                        French Branch
-                    </strong>
-
-                    (April to June 2026)
-
-                </div>
+                European Pricing &amp; Product Manager
 
             </div>
 
 
+            <div class="role-location">
 
-            <!-- ROLE 2 -->
+                Pinerolo (TO), Italian Office
 
-            <div class="role">
+            </div>
 
-                <div class="role-title">
+
+            <div class="role-date">
+
+                April 2026 -- Present
+
+            </div>
+
+
+            <div class="role-description">
+
+                Pricing Model, Analysis Tool &amp; KPI Deployment,
+                alongside sales support and reporting activities.
+
+            </div>
+
+
+            <div class="assignment">
+
+                -
+
+                <strong>
+
+                    6 Week International Assignment -
+                    French Branch (April to June 2026)
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEVEL 2 -->
+
+        <div class="experience-level-2">
+
+            <div class="previous-role">
+
+                -
+
+                <span class="previous-role-title">
 
                     Product Management Support
 
-                </div>
+                </span>
+
+                <br>
+
+                May 2025 – March 2026
 
 
-                <div class="role-date">
-
-                    May 2025 – March 2026
-
-                </div>
-
-
-                <div class="role-description">
+                <div class="previous-role-description">
 
                     Pricing Model Development alongside
-                    sales support and reporting activities.
+                    sales support and reporting activities
 
                 </div>
 
 
-                <div class="assignment">
+                <div class="green-belt">
 
-                    <strong>
-                        Green Belt – Lean Administration
-                    </strong>
+                    -
 
+                    Green Belt – Lean Administration
                     (February 2026)
 
                 </div>
@@ -954,48 +719,42 @@
             </div>
 
 
+            <!-- LEVEL 3 -->
 
-            <!-- ROLE 3 -->
+            <div class="experience-level-3">
 
-            <div class="role">
+                -
 
-                <div class="role-title">
+                <span class="previous-role-title">
 
-                    Product Management –
-                    Extracurricular Internship
+                    Product Management – Extracurricular Internship
 
-                </div>
+                </span>
 
+                <br>
 
-                <div class="role-date">
-
-                    November 2024 – May 2025
-
-                </div>
-
-            </div>
+                November 2024 – May 2025
 
 
+                <!-- LEVEL 4 -->
 
-            <!-- ROLE 4 -->
+                <div class="experience-level-4">
 
-            <div class="role">
+                    -
 
-                <div class="role-title">
+                    <span class="previous-role-title">
 
-                    Curricular Internship
+                        Curricular Internship
 
-                </div>
+                    </span>
 
-
-                <div class="role-date">
+                    <br>
 
                     September 2024 – November 2024
 
                 </div>
 
             </div>
-
 
         </div>
 
@@ -1007,37 +766,65 @@
          LANGUAGES
     ========================= -->
 
-    <section>
+    <section class="section">
 
-        <h2>
-            Languages
-        </h2>
+        <div class="section-title">
 
-
-        <div class="language">
-
-            <strong>English</strong>
-
-            - B2, Cambridge First-level Certificate,
-            ID: 950964YHN (October 2020)
+            <span>
+                Languages
+            </span>
 
         </div>
 
 
-        <div class="language">
-
-            <strong>French</strong>
-
-            - A2, Basic Proficiency
-
-        </div>
+        <div class="languages">
 
 
-        <div class="language">
+            <div class="language">
 
-            <strong>Italian</strong>
+                <strong>
+                    English
+                </strong>
 
-            - Native Language
+                <span class="language-details">
+
+                    - B2, Cambridge First-level Certificate,
+                    ID: 950964YHN (October 2020)
+
+                </span>
+
+            </div>
+
+
+            <div class="language">
+
+                <strong>
+                    French
+                </strong>
+
+                <span class="language-details">
+
+                    - A2, Basic Proficiency
+
+                </span>
+
+            </div>
+
+
+            <div class="language">
+
+                <strong>
+                    Italian
+                </strong>
+
+                <span class="language-details">
+
+                    - Native Language
+
+                </span>
+
+            </div>
+
 
         </div>
 
@@ -1046,19 +833,27 @@
 
 
     <!-- =========================
-         FOOTER
+         DOWNLOAD CV
     ========================= -->
 
-    <footer>
+    <div class="download-container">
 
-        Lorenzo Rosso · Economics &amp; Finance
+        <a
+            class="download-button"
+            href="cv.pdf"
+            download
+        >
 
-    </footer>
+            Download CV
+
+        </a>
+
+    </div>
 
 
-</main>
+</div>
 
 
 </body>
 
-</html>
+</html></html>
