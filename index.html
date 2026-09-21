@@ -1,428 +1,488 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Lorenzo Rosso - Corporate Finance & Financial Markets student">
+<meta name="description"
+      content="Lorenzo Rosso - Corporate Finance & Financial Markets student">
 
-    <title>Lorenzo Rosso</title>
+<title>Lorenzo Rosso</title>
 
 
-    <style>
+<style>
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        background: #ffffff;
+        color: #000000;
+
+        font-family:
+            "Times New Roman",
+            Times,
+            serif;
+
+        font-size: 11pt;
+        line-height: 1.25;
+    }
+
+
+    .page {
+        width: 100%;
+        max-width: 900px;
+
+        margin: 0 auto;
+
+        padding: 45px 35px 55px;
+    }
+
+
+    /* =========================
+       NAME
+    ========================= */
+
+    .name {
+        text-align: center;
+
+        font-size: 22px;
+        font-weight: bold;
+
+        margin: 0 0 12px 0;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .section {
+        margin-top: 12px;
+    }
+
+
+    .section-title {
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        margin: 0 0 8px 0;
+
+        font-size: 10pt;
+        font-weight: bold;
+
+        text-align: center;
+    }
+
+
+    .section-title::before,
+    .section-title::after {
+        content: "";
+
+        flex: 1;
+
+        height: 1px;
+
+        background: #000000;
+    }
+
+
+    .section-title span {
+        padding: 0 12px;
+    }
+
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education-entry {
+        margin-bottom: 6px;
+    }
+
+
+    .education-title {
+        font-size: 10.2pt;
+        font-weight: bold;
+    }
+
+
+    .education-details {
+        margin-top: 0;
+    }
+
+
+    .education-achievement {
+        font-weight: bold;
+    }
+
+
+    .thesis {
+        margin-top: 4px;
+
+        font-size: 9pt;
+    }
+
+
+    .thesis-label {
+        font-weight: bold;
+    }
+
+
+    .thesis a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+
+    .thesis a:hover {
+        text-decoration: underline;
+    }
+
+
+    .certificate-list {
+        margin-top: -2px;
+        margin-bottom: 0;
+
+        padding-left: 20px;
+
+        font-size: 9pt;
+    }
+
+
+    .certificate-list li {
+        margin-bottom: 0;
+    }
+
+
+    .certificate-list a {
+        color: #000000;
+
+        text-decoration: none;
+    }
+
+
+    .certificate-list a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .company {
+        margin-bottom: 8px;
+    }
+
+
+    .company-name {
+        font-size: 10.2pt;
+        font-weight: bold;
+    }
+
+
+    .company-name a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+
+    .company-name a:hover {
+        text-decoration: underline;
+    }
+
+
+    .company-division {
+        display: inline;
+    }
+
+
+    /*
+     * Timeline containing all positions
+     * within the same company.
+     */
+
+    .experience-timeline {
+        position: relative;
+
+        margin-left: 8px;
+        padding-left: 20px;
+    }
+
+
+    /*
+     * Vertical line connecting the positions.
+     */
+
+    .experience-timeline::before {
+        content: "";
+
+        position: absolute;
+
+        top: 5px;
+        bottom: 5px;
+        left: 3px;
+
+        width: 1px;
+
+        background: #777777;
+    }
+
+
+    .experience-item {
+        position: relative;
+
+        margin-bottom: 12px;
+    }
+
+
+    /*
+     * Timeline dot.
+     */
+
+    .experience-item::before {
+        content: "";
+
+        position: absolute;
+
+        left: -21px;
+        top: 5px;
+
+        width: 7px;
+        height: 7px;
+
+        border: 1px solid #000000;
+
+        background: #ffffff;
+
+        border-radius: 50%;
+    }
+
+
+    /*
+     * Current position gets a solid dot.
+     */
+
+    .experience-item.current::before {
+        background: #000000;
+    }
+
+
+    .current-role {
+        margin-top: 0;
+    }
+
+
+    .role-title {
+        font-size: 10.2pt;
+        font-weight: bold;
+    }
+
+
+    .role-location,
+    .role-date {
+        display: block;
+    }
+
+
+    .role-description {
+        margin-top: 2px;
+
+        font-size: 10pt;
+
+        font-style: italic;
+    }
+
+
+    .assignment {
+        margin-top: 3px;
+
+        font-size: 9pt;
+    }
+
+
+    .assignment strong {
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       PREVIOUS ROLES
+    ========================= */
+
+    .previous-role {
+        margin-bottom: 0;
+    }
+
+
+    .previous-role-title {
+        font-style: italic;
+    }
+
+
+    .previous-role-description {
+        margin-top: 2px;
+
+        font-size: 10pt;
+
+        font-style: italic;
+    }
+
+
+    .green-belt {
+        margin-top: 2px;
+
+        font-size: 9pt;
+    }
+
+
+    /* =========================
+       LANGUAGES
+    ========================= */
+
+    .languages {
+        margin-top: 6px;
+    }
+
+
+    .language {
+        margin-bottom: 2px;
+    }
+
+
+    .language strong {
+        font-weight: bold;
+    }
+
+
+    .language-details {
+        font-size: 9pt;
+    }
+
+
+    /* =========================
+       DOWNLOAD CV
+    ========================= */
+
+    .download-container {
+        text-align: center;
+
+        margin-top: 28px;
+    }
+
+
+    .download-button {
+        display: inline-block;
+
+        padding: 8px 15px;
+
+        border: 1px solid #000000;
+
+        color: #000000;
+
+        text-decoration: none;
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        font-size: 12px;
+
+        margin: 0 4px;
+
+        background: #ffffff;
+
+        cursor: pointer;
+    }
+
+
+    .download-button:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
 
         body {
-            margin: 0;
-            padding: 0;
-
-            background: #ffffff;
-            color: #000000;
-
-            font-family:
-                "Times New Roman",
-                Times,
-                serif;
-
-            font-size: 11pt;
-            line-height: 1.25;
+            font-size: 10.5pt;
         }
 
 
         .page {
-            width: 100%;
-            max-width: 900px;
-
-            margin: 0 auto;
-
-            padding: 45px 35px 55px;
+            padding:
+                30px 20px 45px;
         }
 
-
-        /* =========================
-           NAME
-        ========================= */
 
         .name {
-            text-align: center;
-
-            font-size: 22px;
-            font-weight: bold;
-
-            margin: 0 0 12px 0;
+            font-size: 21px;
         }
 
 
-        /* =========================
-           SECTIONS
-        ========================= */
-
         .section {
-            margin-top: 12px;
+            margin-top: 11px;
         }
 
 
         .section-title {
-            display: flex;
+            font-size: 9.5pt;
+        }
 
-            align-items: center;
 
-            width: 100%;
-
-            margin: 0 0 8px 0;
-
+        .education-title,
+        .company-name,
+        .role-title {
             font-size: 10pt;
-            font-weight: bold;
-
-            text-align: center;
-        }
-
-
-        .section-title::before,
-        .section-title::after {
-            content: "";
-
-            flex: 1;
-
-            height: 1px;
-
-            background: #000000;
-        }
-
-
-        .section-title span {
-            padding: 0 12px;
-        }
-
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education-entry {
-            margin-bottom: 6px;
-        }
-
-
-        .education-title {
-            font-size: 10.2pt;
-            font-weight: bold;
-        }
-
-
-        .education-details {
-            margin-top: 0;
-        }
-
-
-        .education-achievement {
-            font-weight: bold;
-        }
-
-
-        .thesis {
-            margin-top: 4px;
-
-            font-size: 9pt;
-        }
-
-
-        .thesis-label {
-            font-weight: bold;
-        }
-
-
-        .thesis a {
-            color: #000000;
-            text-decoration: none;
-        }
-
-
-        .thesis a:hover {
-            text-decoration: underline;
         }
 
 
         .certificate-list {
-            margin-top: -2px;
-            margin-bottom: 0;
-
-            padding-left: 20px;
-
-            font-size: 9pt;
+            padding-left: 18px;
         }
 
 
-        .certificate-list li {
-            margin-bottom: 0;
+        .experience-timeline {
+            margin-left: 5px;
+            padding-left: 18px;
         }
 
 
-        .certificate-list a {
-            color: #000000;
-
-            text-decoration: none;
-        }
-
-
-        .certificate-list a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           EXPERIENCE
-        ========================= */
-
-        .company {
-            margin-bottom: 2px;
-        }
-
-
-        .company-name {
-            font-size: 10.2pt;
-            font-weight: bold;
-        }
-
-
-        .company-name a {
-            color: #000000;
-            text-decoration: none;
-        }
-
-
-        .company-name a:hover {
-            text-decoration: underline;
-        }
-
-
-        .company-division {
-            display: inline;
-        }
-
-
-        .current-role {
-            margin-top: 2px;
-        }
-
-
-        .role-title {
-            font-size: 10.2pt;
-            font-weight: bold;
-        }
-
-
-        .role-location,
-        .role-date {
-            display: block;
-        }
-
-
-        .role-description {
-            margin-top: 2px;
-
-            font-size: 10pt;
-
-            font-style: italic;
-        }
-
-
-        .assignment {
-            margin-top: 2px;
-
-            font-size: 9pt;
-        }
-
-
-        .assignment strong {
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           PREVIOUS ROLES
-        ========================= */
-
-        .experience-level-2 {
-            margin-top: 0;
-
-            padding-left: 20px;
-        }
-
-
-        .experience-level-3 {
-            margin-top: 2px;
-
-            padding-left: 20px;
-        }
-
-
-        .experience-level-4 {
-            margin-top: 8px;
-
-            padding-left: 20px;
-        }
-
-
-        .previous-role {
-            margin-bottom: 0;
-        }
-
-
-        .previous-role-title {
-            font-style: italic;
-        }
-
-
-        .previous-role-description {
-            margin-top: 0;
-
-            font-size: 10pt;
-
-            font-style: italic;
-        }
-
-
-        .green-belt {
-            margin-top: 2px;
-
-            font-size: 9pt;
-        }
-
-
-        /* =========================
-           LANGUAGES
-        ========================= */
-
-        .languages {
-            margin-top: 6px;
-        }
-
-
-        .language {
-            margin-bottom: 2px;
-        }
-
-
-        .language strong {
-            font-weight: bold;
-        }
-
-
-        .language-details {
-            font-size: 9pt;
-        }
-
-
-        /* =========================
-           DOWNLOAD CV
-        ========================= */
-
-        .download-container {
-            text-align: center;
-
-            margin-top: 28px;
+        .experience-item::before {
+            left: -19px;
         }
 
 
         .download-button {
-            display: inline-block;
-
-            padding: 8px 15px;
-
-            border: 1px solid #000000;
-
-            color: #000000;
-
-            text-decoration: none;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 12px;
-
-            margin: 0 4px;
+            margin: 3px 2px;
         }
 
+    }
 
-        .download-button:hover {
-            background: #000000;
-            color: #ffffff;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            body {
-                font-size: 10.5pt;
-            }
-
-
-            .page {
-                padding:
-                    30px 20px 45px;
-            }
-
-
-            .name {
-                font-size: 21px;
-            }
-
-
-            .section {
-                margin-top: 11px;
-            }
-
-
-            .section-title {
-                font-size: 9.5pt;
-            }
-
-
-            .education-title,
-            .company-name,
-            .role-title {
-                font-size: 10pt;
-            }
-
-
-            .certificate-list {
-                padding-left: 18px;
-            }
-
-
-            .experience-level-2,
-            .experience-level-3,
-            .experience-level-4 {
-                padding-left: 16px;
-            }
-
-
-            .download-button {
-                margin: 3px 2px;
-            }
-
-        }
-
-    </style>
+</style>
+```
 
 </head>
 
@@ -500,286 +560,290 @@ async function shareCV() {
 
 <body>
 
-
 <div class="page">
 
+```
+<!-- =========================
+     NAME
+========================= -->
 
-    <!-- =========================
-         NAME
-    ========================= -->
+<div class="name">
+    Lorenzo Rosso
+</div>
 
-    <div class="name">
-        Lorenzo Rosso
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>Education</span>
     </div>
 
 
+    <div class="education-entry">
 
-    <!-- =========================
-         EDUCATION
-    ========================= -->
+        <div class="education-title">
 
-    <section class="section">
-
-        <div class="section-title">
-            <span>Education</span>
-        </div>
-
-
-        <div class="education-entry">
-
-            <div class="education-title">
-
-                Master Degree (Laurea Magistrale) -
-                Corporate Finance &amp; Financial Markets (LM-77)
-
-            </div>
-
-
-            <div class="education-details">
-
-                School of Management and Economics,
-                Università degli Studi di Torino
-
-            </div>
-
-
-            <div class="education-details">
-
-                September 2025 -- Present
-
-            </div>
+            Master Degree (Laurea Magistrale) -
+            Corporate Finance &amp; Financial Markets (LM-77)
 
         </div>
 
 
-        <div class="education-entry">
+        <div class="education-details">
 
-            <div class="education-title">
+            School of Management and Economics,
+            Università degli Studi di Torino
 
-                Bachelor Degree (Laurea Triennale) -
-                Business Administration &amp; Management (L-18)
-
-            </div>
+        </div>
 
 
-            <div class="education-details">
+        <div class="education-details">
 
-                School of Management and Economics,
-                Università degli Studi di Torino
+            September 2025 -- Present
 
-            </div>
+        </div>
 
-
-            <div class="education-details">
-
-                September 2022 – July 2025
-
-            </div>
+    </div>
 
 
-            <div class="education-achievement">
+    <div class="education-entry">
 
-                Graduated with 110/110 cum Laude
+        <div class="education-title">
 
-            </div>
+            Bachelor Degree (Laurea Triennale) -
+            Business Administration &amp; Management (L-18)
+
+        </div>
 
 
-            <div class="thesis">
+        <div class="education-details">
 
-                <span class="thesis-label">
-                    Thesis:
-                </span>
+            School of Management and Economics,
+            Università degli Studi di Torino
+
+        </div>
+
+
+        <div class="education-details">
+
+            September 2022 – July 2025
+
+        </div>
+
+
+        <div class="education-achievement">
+
+            Graduated with 110/110 cum Laude
+
+        </div>
+
+
+        <div class="thesis">
+
+            <span class="thesis-label">
+                Thesis:
+            </span>
+
+            <a
+                href="https://hdl.handle.net/20.500.14240/172897"
+                target="_blank"
+                rel="noopener"
+            >
+                "Hostile Takeovers and Main Defense Mechanisms:
+                Framework, Regulatory Aspects, and Distinctive Features"
+            </a>
+
+        </div>
+
+
+        <ul class="certificate-list">
+
+            <li>
 
                 <a
-                    href="https://hdl.handle.net/20.500.14240/172897"
+                    href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
                     target="_blank"
                     rel="noopener"
                 >
-                    "Hostile Takeovers and Main Defense Mechanisms:
-                    Framework, Regulatory Aspects, and Distinctive Features"
+
+                    Mergers and Acquisitions /
+                    University of Illinois Urbana-Champaign,
+                    Coursera (April 2024)
+
                 </a>
 
-            </div>
+            </li>
 
 
-            <ul class="certificate-list">
-
-                <li>
-
-                    <a
-                        href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        Mergers and Acquisitions /
-                        University of Illinois Urbana-Champaign,
-                        Coursera (April 2024)
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a
-                        href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        Private Equity and Venture Capital /
-                        Bocconi University,
-                        Coursera (October 2024)
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="education-entry">
-
-            <div class="education-title">
-
-                High School - Traditional scientific diploma
-
-            </div>
-
-
-            <div class="education-details">
-
-                Liceo Scientifico “Maria Curie”
-                (scientific high-school)
-
-            </div>
-
-
-            <div class="education-details">
-
-                September 2016 – July 2021
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PROFESSIONAL EXPERIENCE
-    ========================= -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span>
-                Professional Experience
-            </span>
-
-        </div>
-
-
-        <!-- COMPANY -->
-
-        <div class="company">
-
-            <span class="company-name">
+            <li>
 
                 <a
-                    href="https://www.corteco.com/"
+                    href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
                     target="_blank"
                     rel="noopener"
                 >
-                    CORTECO
+
+                    Private Equity and Venture Capital /
+                    Bocconi University,
+                    Coursera (October 2024)
+
                 </a>
 
-                –
+            </li>
 
-                <a
-                    href="https://www.freudenberg.com/en"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Freudenberg Sealing Technologies
-                </a>
+        </ul>
 
-            </span>
+    </div>
 
-            -
 
-            <span class="company-division">
+    <div class="education-entry">
 
-                Independent Automotive Aftermarket's
-                Division (B2B)
+        <div class="education-title">
 
-            </span>
+            High School - Traditional scientific diploma
 
         </div>
 
 
-        <!-- LEVEL 1 -->
+        <div class="education-details">
 
-        <div class="current-role">
+            Liceo Scientifico “Maria Curie”
+            (scientific high-school)
 
-            <div class="role-title">
-
-                European Pricing &amp; Product Manager
-
-            </div>
+        </div>
 
 
-            <div class="role-location">
+        <div class="education-details">
 
-                Pinerolo (TO), Italian Office
+            September 2016 – July 2021
 
-            </div>
+        </div>
 
+    </div>
 
-            <div class="role-date">
-
-                April 2026 -- Present
-
-            </div>
+</section>
 
 
-            <div class="role-description">
 
-                Pricing Model, Analysis Tool &amp; KPI Deployment,
-                alongside sales support and reporting activities.
+<!-- =========================
+     PROFESSIONAL EXPERIENCE
+========================= -->
 
-            </div>
+<section class="section">
+
+    <div class="section-title">
+
+        <span>
+            Professional Experience
+        </span>
+
+    </div>
 
 
-            <div class="assignment">
+    <!-- COMPANY -->
 
-                -
+    <div class="company">
 
-                <strong>
+        <span class="company-name">
 
-                    6 Week International Assignment -
-                    French Branch (April to June 2026)
+            <a
+                href="https://www.corteco.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                CORTECO
+            </a>
 
-                </strong>
+            –
+
+            <a
+                href="https://www.freudenberg.com/en"
+                target="_blank"
+                rel="noopener"
+            >
+                Freudenberg Sealing Technologies
+            </a>
+
+        </span>
+
+        -
+
+        <span class="company-division">
+
+            Independent Automotive Aftermarket's
+            Division (B2B)
+
+        </span>
+
+    </div>
+
+
+    <!-- EXPERIENCE TIMELINE -->
+
+    <div class="experience-timeline">
+
+
+        <!-- CURRENT ROLE -->
+
+        <div class="experience-item current">
+
+            <div class="current-role">
+
+                <div class="role-title">
+
+                    European Pricing &amp; Product Manager
+
+                </div>
+
+
+                <div class="role-location">
+
+                    Pinerolo (TO), Italian Office
+
+                </div>
+
+
+                <div class="role-date">
+
+                    April 2026 -- Present
+
+                </div>
+
+
+                <div class="role-description">
+
+                    Pricing Model, Analysis Tool &amp; KPI Deployment,
+                    alongside sales support and reporting activities.
+
+                </div>
+
+
+                <div class="assignment">
+
+                    <strong>
+
+                        6 Week International Assignment -
+                        French Branch (April to June 2026)
+
+                    </strong>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <!-- LEVEL 2 -->
+        <!-- PRODUCT MANAGEMENT SUPPORT -->
 
-        <div class="experience-level-2">
+        <div class="experience-item">
 
             <div class="previous-role">
-
-                -
 
                 <span class="previous-role-title">
 
@@ -802,8 +866,6 @@ async function shareCV() {
 
                 <div class="green-belt">
 
-                    -
-
                     Green Belt – Lean Administration
                     (February 2026)
 
@@ -811,12 +873,14 @@ async function shareCV() {
 
             </div>
 
+        </div>
 
-            <!-- LEVEL 3 -->
 
-            <div class="experience-level-3">
+        <!-- EXTRACURRICULAR INTERNSHIP -->
 
-                -
+        <div class="experience-item">
+
+            <div class="previous-role">
 
                 <span class="previous-role-title">
 
@@ -828,138 +892,143 @@ async function shareCV() {
 
                 November 2024 – May 2025
 
+            </div>
 
-                <!-- LEVEL 4 -->
+        </div>
 
-                <div class="experience-level-4">
 
-                    -
+        <!-- CURRICULAR INTERNSHIP -->
 
-                    <span class="previous-role-title">
+        <div class="experience-item">
 
-                        Curricular Internship
+            <div class="previous-role">
 
-                    </span>
+                <span class="previous-role-title">
 
-                    <br>
+                    Curricular Internship
 
-                    September 2024 – November 2024
+                </span>
 
-                </div>
+                <br>
+
+                September 2024 – November 2024
 
             </div>
 
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
-         LANGUAGES
-    ========================= -->
+<!-- =========================
+     LANGUAGES
+========================= -->
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>
-                Languages
+        <span>
+            Languages
+        </span>
+
+    </div>
+
+
+    <div class="languages">
+
+
+        <div class="language">
+
+            <strong>
+                English
+            </strong>
+
+            <span class="language-details">
+
+                - B2, Cambridge First-level Certificate,
+                ID: 950964YHN (October 2020)
+
             </span>
 
         </div>
 
 
-        <div class="languages">
+        <div class="language">
 
+            <strong>
+                French
+            </strong>
 
-            <div class="language">
+            <span class="language-details">
 
-                <strong>
-                    English
-                </strong>
+                - A2, Basic Proficiency
 
-                <span class="language-details">
-
-                    - B2, Cambridge First-level Certificate,
-                    ID: 950964YHN (October 2020)
-
-                </span>
-
-            </div>
-
-
-            <div class="language">
-
-                <strong>
-                    French
-                </strong>
-
-                <span class="language-details">
-
-                    - A2, Basic Proficiency
-
-                </span>
-
-            </div>
-
-
-            <div class="language">
-
-                <strong>
-                    Italian
-                </strong>
-
-                <span class="language-details">
-
-                    - Native Language
-
-                </span>
-
-            </div>
-
+            </span>
 
         </div>
 
-    </section>
 
+        <div class="language">
 
+            <strong>
+                Italian
+            </strong>
 
-    <!-- =========================
-         DOWNLOAD CV
-    ========================= -->
+            <span class="language-details">
 
-    <div class="download-container">
+                - Native Language
 
-        <a
-        class="download-button"
-        href="cv.pdf"
-        download="Lorenzo_Rosso_CV.pdf"
-        >
-        Download CV
-        </a>
+            </span>
 
-        <a
-        class="download-button"
-        href="cv-short.pdf"
-        download="Lorenzo_Rosso_Short_CV.pdf"
-        >
-        Download Short CV
-        </a>
+        </div>
 
-        <button
-        class="download-button"
-        type="button"
-        onclick="shareCV()"
-        >
-        Share CV
-        </button>
 
     </div>
 
+</section>
+
+
+
+<!-- =========================
+     DOWNLOAD CV
+========================= -->
+
+<div class="download-container">
+
+    <a
+        class="download-button"
+        href="cv.pdf"
+        download="Lorenzo_Rosso_CV.pdf"
+    >
+        Download CV
+    </a>
+
+
+    <a
+        class="download-button"
+        href="cv-short.pdf"
+        download="Lorenzo_Rosso_Short_CV.pdf"
+    >
+        Download Short CV
+    </a>
+
+
+    <button
+        class="download-button"
+        type="button"
+        onclick="shareCV()"
+    >
+        Share CV
+    </button>
 
 </div>
 
+</div>
 
 </body>
 
