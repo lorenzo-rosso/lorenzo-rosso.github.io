@@ -11,8 +11,20 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
-
-
+\usepackage[most]{tcolorbox}
+\newtcolorbox{experiencelevel}[1][]{
+    enhanced,
+    breakable,
+    frame hidden,
+    borderline west={0.5pt}{0pt}{black},
+    left=8pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    boxsep=0pt,
+    #1
+}
+\usepackage{tikz}
 % --------------------------------------------------
 % PAGE SETTINGS
 % --------------------------------------------------
@@ -185,30 +197,11 @@ September 2016 – July 2021
 % ==================================================
 
 \section*{Professional Experience}
-
 \vspace{8pt}
-
-
-% --------------------------------------------------
-% COMPANY
-% --------------------------------------------------
-
-\textbf{
-    \href{
-        https://www.corteco.com/
-    }{
-        CORTECO
-    }
+\textbf{\href{https://www.corteco.com/}{CORTECO}
     –
-    \href{
-        https://www.freudenberg.com/en
-    }{
-        Freudenberg Sealing Technologies
-    }
-}
--
-Independent Automotive Aftermarket's Division (B2B)
-
+\href{https://www.freudenberg.com/en}{Freudenberg Sealing Technologies}
+} - Independent Automotive Aftermarket's Division (B2B)
 
 \vspace{2pt}
 
@@ -217,16 +210,9 @@ Independent Automotive Aftermarket's Division (B2B)
 % CURRENT ROLE
 % --------------------------------------------------
 
-\textbf{European Pricing \& Product Manager}
-
-\\
-
-Pinerolo (TO), Italian Office
-
-\\
-
+\textbf{European Pricing \& Product Manager}\\
+Pinerolo (TO), Italian Office\\
 April 2026 -- Present
-
 
 {\small
 \textit{
@@ -235,105 +221,80 @@ April 2026 -- Present
 }
 }
 
-
 \vspace{2pt}
 
-
 {\small
-
 -
 \textbf{
     6 Week International Assignment -
     French Branch (April to June 2026)
 }
-
 }
 
-
-\normalsize
+\vspace{3pt}
 
 
 % --------------------------------------------------
-% PREVIOUS ROLE - LEVEL 2
+% PREVIOUS EXPERIENCE
 % --------------------------------------------------
 
 \begin{itemize}[
     leftmargin=5mm,
-    itemsep=0pt
+    itemsep=0pt,
+    label={-}
 ]
 
-\item[-]
-\textit{Product Management Support}
-
-\\
-
+\item
+\textit{Product Management Support}\\
 May 2025 – March 2026
 
-
 {\small
-
-\textit{
-    Pricing Model Development alongside sales support
+\textit{Pricing Model Development alongside sales support
     and reporting activities
-}
-
 \\
-
--
-Green Belt – Lean Administration
-(February 2026)
-
+    Green Belt – Lean Administration
+    (February 2026)
 }
 
 
 % --------------------------------------------------
-% PREVIOUS ROLE - LEVEL 3
+% LEVEL 2
 % --------------------------------------------------
 
 \begin{itemize}[
-    leftmargin=5mm,
-    itemsep=2pt
+    leftmargin=8mm,
+    itemsep=2pt,
+    label={-}
 ]
 
-\item[-]
+\item
 \textit{
     Product Management – Extracurricular Internship
-}
-
-\\
-
+}\\
 November 2024 – May 2025
 
 
-\vspace{8pt}
-
-
 % --------------------------------------------------
-% PREVIOUS ROLE - LEVEL 4
+% LEVEL 3
 % --------------------------------------------------
 
 \begin{itemize}[
-    leftmargin=5mm,
-    itemsep=2pt
+    leftmargin=8mm,
+    itemsep=2pt,
+    label={-}
 ]
 
-\item[-]
+\item
 \textit{
     Curricular Internship
-}
-
-\\
-
+}\\
 September 2024 – November 2024
 
-
 \end{itemize}
 
 \end{itemize}
 
 \end{itemize}
-
-
 % ==================================================
 % LANGUAGES
 % ==================================================
