@@ -3,572 +3,502 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-      content="Lorenzo Rosso - Corporate Finance & Financial Markets student">
+    <meta name="description"
+          content="Lorenzo Rosso - Corporate Finance & Financial Markets">
 
-<title>Lorenzo Rosso</title>
+    <meta name="theme-color"
+          content="#ffffff">
 
+    <title>Lorenzo Rosso</title>
 
-<style>
 
-    * {
-        box-sizing: border-box;
-    }
+    <!-- =========================
+         QR CODE LIBRARY
+    ========================= -->
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <script
+        src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js">
+    </script>
 
-    body {
-        margin: 0;
-        padding: 0;
 
-        background: #ffffff;
-        color: #000000;
+    <style>
 
-        font-family:
-            "Times New Roman",
-            Times,
-            serif;
-
-        font-size: 11pt;
-        line-height: 1.25;
-    }
-
-
-    .page {
-        width: 100%;
-        max-width: 900px;
-
-        margin: 0 auto;
-
-        padding: 45px 35px 55px;
-    }
-
-
-    /* =========================
-       NAME
-    ========================= */
-
-    .name {
-        text-align: center;
-
-        font-size: 22px;
-        font-weight: bold;
-
-        margin: 0 0 12px 0;
-    }
-
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-        margin-top: 12px;
-    }
-
-
-    .section-title {
-        display: flex;
-
-        align-items: center;
-
-        width: 100%;
-
-        margin: 0 0 8px 0;
-
-        font-size: 10pt;
-        font-weight: bold;
-
-        text-align: center;
-    }
-
-
-    .section-title::before,
-    .section-title::after {
-        content: "";
-
-        flex: 1;
-
-        height: 1px;
-
-        background: #000000;
-    }
-
-
-    .section-title span {
-        padding: 0 12px;
-    }
-
-
-    /* =========================
-       EDUCATION
-    ========================= */
-
-    .education-entry {
-        margin-bottom: 6px;
-    }
-
-
-    .education-title {
-        font-size: 10.2pt;
-        font-weight: bold;
-    }
-
-
-    .education-details {
-        margin-top: 0;
-    }
-
-
-    .education-achievement {
-        font-weight: bold;
-    }
-
-
-    .thesis {
-        margin-top: 4px;
-
-        font-size: 9pt;
-    }
-
-
-    .thesis-label {
-        font-weight: bold;
-    }
-
-
-    .thesis a {
-        color: #000000;
-        text-decoration: none;
-    }
-
-
-    .thesis a:hover {
-        text-decoration: underline;
-    }
-
-
-    .certificate-list {
-        margin-top: -2px;
-        margin-bottom: 0;
-
-        padding-left: 20px;
-
-        font-size: 9pt;
-    }
-
-
-    .certificate-list li {
-        margin-bottom: 0;
-    }
-
-
-    .certificate-list a {
-        color: #000000;
-
-        text-decoration: none;
-    }
-
-
-    .certificate-list a:hover {
-        text-decoration: underline;
-    }
-
-
-    /* =========================
-       EXPERIENCE
-    ========================= */
-
-    .company {
-        margin-bottom: 8px;
-    }
-
-
-    .company-name {
-        font-size: 10.2pt;
-        font-weight: bold;
-    }
-
-
-    .company-name a {
-        color: #000000;
-        text-decoration: none;
-    }
-
-
-    .company-name a:hover {
-        text-decoration: underline;
-    }
-
-
-    .company-division {
-        display: inline;
-    }
-
-
-    /* =========================
-       EXPERIENCE TIMELINE
-    ========================= */
-
-    .experience-timeline {
-        position: relative;
-
-        margin-left: 8px;
-        padding-left: 20px;
-    }
-
-
-    .experience-timeline::before {
-        content: "";
-
-        position: absolute;
-
-        top: 5px;
-        bottom: 5px;
-        left: 3px;
-
-        width: 1px;
-
-        background: #777777;
-    }
-
-
-    .experience-item {
-        position: relative;
-
-        margin-bottom: 12px;
-    }
-
-
-    .experience-item::before {
-        content: "";
-
-        position: absolute;
-
-        left: -21px;
-        top: 5px;
-
-        width: 7px;
-        height: 7px;
-
-        border: 1px solid #000000;
-
-        background: #ffffff;
-
-        border-radius: 50%;
-    }
-
-
-    .experience-item.current::before {
-        background: #000000;
-    }
-
-
-    .current-role {
-        margin-top: 0;
-    }
-
-
-    .role-title {
-        font-size: 10.2pt;
-        font-weight: bold;
-    }
-
-
-    .role-location,
-    .role-date {
-        display: block;
-    }
-
-
-    .role-description {
-        margin-top: 2px;
-
-        font-size: 10pt;
-
-        font-style: italic;
-    }
-
-
-    .assignment {
-        margin-top: 3px;
-
-        font-size: 9pt;
-    }
-
-
-    .assignment strong {
-        font-weight: bold;
-    }
-
-
-    /* =========================
-       PREVIOUS ROLES
-    ========================= */
-
-    .previous-role {
-        margin-bottom: 0;
-    }
-
-
-    .previous-role-title {
-        font-style: italic;
-    }
-
-
-    .previous-role-description {
-        margin-top: 2px;
-
-        font-size: 10pt;
-
-        font-style: italic;
-    }
-
-
-    .green-belt {
-        margin-top: 2px;
-
-        font-size: 9pt;
-    }
-
-
-    /* =========================
-       LANGUAGES
-    ========================= */
-
-    .languages {
-        margin-top: 6px;
-    }
-
-
-    .language {
-        margin-bottom: 2px;
-    }
-
-
-    .language strong {
-        font-weight: bold;
-    }
-
-
-    .language-details {
-        font-size: 9pt;
-    }
-
-
-    /* =========================
-       DOWNLOAD / SHARE
-    ========================= */
-
-    .download-container {
-        text-align: center;
-
-        margin-top: 28px;
-    }
-
-
-    .download-button {
-        display: inline-block;
-
-        padding: 7px 14px;
-
-        border: 1px solid #000000;
-
-        color: #000000;
-
-        text-decoration: none;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size: 12px;
-
-        line-height: 1.15;
-
-        margin: 0 4px;
-
-        background: #ffffff;
-
-        cursor: pointer;
-
-        text-align: center;
-    }
-
-
-    .cv-name {
-        display: block;
-
-        font-size: 12px;
-
-        font-weight: normal;
-    }
-
-
-    .cv-download {
-        display: block;
-
-        margin-top: 2px;
-
-        font-size: 9px;
-
-        font-weight: normal;
-    }
-
-
-    .download-button:hover {
-        background: #000000;
-
-        color: #ffffff;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 600px) {
-
-        body {
-            font-size: 10.5pt;
+        * {
+            box-sizing: border-box;
         }
 
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background: #ffffff;
+            color: #000000;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 11pt;
+            line-height: 1.3;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
         .page {
+            width: 100%;
+            max-width: 620px;
+
+            margin: 0 auto;
+
             padding:
-                30px 20px 45px;
+                55px 30px 45px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            text-align: center;
+
+            margin-bottom: 28px;
         }
 
 
         .name {
-            font-size: 21px;
+            margin: 0;
+
+            font-size: 28px;
+            font-weight: bold;
+
+            line-height: 1.1;
         }
 
 
+        .subtitle {
+            margin-top: 7px;
+
+            font-size: 13px;
+
+            letter-spacing: 0.2px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
         .section {
-            margin-top: 11px;
+            margin-top: 25px;
         }
 
 
         .section-title {
-            font-size: 9.5pt;
+            display: flex;
+
+            align-items: center;
+
+            width: 100%;
+
+            margin-bottom: 15px;
+
+            font-size: 10px;
+            font-weight: bold;
+
+            letter-spacing: 1.2px;
+
+            text-align: center;
+
+            text-transform: uppercase;
         }
 
 
-        .education-title,
-        .company-name,
-        .role-title {
+        .section-title::before,
+        .section-title::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #000000;
+        }
+
+
+        .section-title span {
+            padding: 0 12px;
+        }
+
+
+        /* =========================
+           UNIVERSITY
+        ========================= */
+
+        .education-entry {
+            margin-bottom: 19px;
+        }
+
+
+        .education-entry:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .entry-title {
+            font-size: 12.5pt;
+
+            font-weight: bold;
+
+            line-height: 1.2;
+        }
+
+
+        .entry-subtitle {
+            margin-top: 3px;
+
+            font-size: 11pt;
+        }
+
+
+        .entry-date {
+            margin-top: 2px;
+
+            font-size: 10pt;
+
+            color: #333333;
+        }
+
+
+        .achievement {
+            margin-top: 3px;
+
+            font-size: 10pt;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CONTACT EMAIL
+        ========================= */
+
+        .contact {
+            margin-top: 18px;
+
+            text-align: center;
+        }
+
+
+        .contact a {
+            color: #000000;
+
+            font-size: 11pt;
+
+            text-decoration: none;
+        }
+
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           PROFESSIONAL
+        ========================= */
+
+        .company {
+            margin-bottom: 17px;
+        }
+
+
+        .company-name {
+            font-size: 12.5pt;
+
+            font-weight: bold;
+
+            line-height: 1.2;
+        }
+
+
+        .company-brand {
+            margin-top: 2px;
+
+            font-size: 10.5pt;
+
+            font-style: italic;
+        }
+
+
+        .professional-role {
+            margin-top: 8px;
+
+            font-size: 12pt;
+
+            font-weight: bold;
+        }
+
+
+        .professional-location {
+            margin-top: 3px;
+
             font-size: 10pt;
         }
 
 
-        .certificate-list {
-            padding-left: 18px;
+        .professional-date {
+            margin-top: 2px;
+
+            font-size: 10pt;
+
+            color: #333333;
         }
 
 
-        .experience-timeline {
-            margin-left: 5px;
+        /* =========================
+           QR SECTION
+        ========================= */
 
-            padding-left: 18px;
+        .qr-section {
+            margin-top: 31px;
+
+            text-align: center;
         }
 
 
-        .experience-item::before {
-            left: -19px;
+        .qr-button {
+            display: inline-block;
+
+            padding: 9px 17px;
+
+            border: 1px solid #000000;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+        }
+
+
+        .qr-button:hover {
+            background: #000000;
+
+            color: #ffffff;
+        }
+
+
+        .qr-container {
+            display: none;
+
+            margin-top: 20px;
+        }
+
+
+        .qr-container.visible {
+            display: block;
+        }
+
+
+        #qrcode {
+            display: inline-block;
+
+            padding: 10px;
+
+            background: #ffffff;
+
+            border: 1px solid #dddddd;
+        }
+
+
+        .qr-description {
+            max-width: 330px;
+
+            margin: 10px auto 0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 9px;
+
+            line-height: 1.4;
+
+            color: #555555;
+        }
+
+
+        /* =========================
+           CV BUTTONS
+        ========================= */
+
+        .download-container {
+            margin-top: 30px;
+
+            text-align: center;
         }
 
 
         .download-button {
+            display: inline-block;
+
+            padding: 7px 14px;
+
             margin: 3px 2px;
+
+            border: 1px solid #000000;
+
+            background: #ffffff;
+
+            color: #000000;
+
+            text-decoration: none;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 12px;
+
+            line-height: 1.15;
+
+            text-align: center;
+
+            cursor: pointer;
         }
 
-    }
 
-</style>
+        .download-button:hover {
+            background: #000000;
+
+            color: #ffffff;
+        }
+
+
+        .cv-name {
+            display: block;
+
+            font-size: 12px;
+        }
+
+
+        .cv-download {
+            display: block;
+
+            margin-top: 2px;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            margin-top: 35px;
+
+            text-align: center;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 8px;
+
+            color: #777777;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding:
+                    38px 22px 40px;
+            }
+
+
+            .header {
+                margin-bottom: 25px;
+            }
+
+
+            .name {
+                font-size: 26px;
+            }
+
+
+            .subtitle {
+                font-size: 12px;
+            }
+
+
+            .section {
+                margin-top: 23px;
+            }
+
+
+            .entry-title {
+                font-size: 12pt;
+            }
+
+
+            .entry-subtitle {
+                font-size: 10.5pt;
+            }
+
+
+            .company-name {
+                font-size: 12pt;
+            }
+
+
+            .professional-role {
+                font-size: 11.5pt;
+            }
+
+
+            .download-button {
+                margin: 3px 1px;
+            }
+
+        }
+
+    </style>
 
 </head>
-
-
-<script>
-
-async function shareCV() {
-
-    try {
-
-        const response = await fetch("cv.pdf");
-
-        const blob = await response.blob();
-
-        const file = new File(
-            [blob],
-            "Lorenzo_Rosso_CV.pdf",
-            {
-                type: "application/pdf"
-            }
-        );
-
-
-        /*
-         * If the browser supports sharing files,
-         * open the native system share menu.
-         */
-
-        if (
-            navigator.share &&
-            navigator.canShare &&
-            navigator.canShare({
-                files: [file]
-            })
-        ) {
-
-            await navigator.share({
-                title: "Lorenzo Rosso - CV",
-                text: "Lorenzo Rosso - Curriculum Vitae",
-                files: [file]
-            });
-
-        } else {
-
-            /*
-             * Fallback for browsers that do not
-             * support file sharing.
-             */
-
-            window.location.href = "cv.pdf";
-
-        }
-
-    } catch (error) {
-
-        /*
-         * Ignore cancellation of the native
-         * share menu.
-         */
-
-        if (error.name !== "AbortError") {
-
-            console.error(
-                "Unable to share CV:",
-                error
-            );
-
-            window.location.href = "cv.pdf";
-        }
-
-    }
-
-}
-
-</script>
 
 
 <body>
@@ -578,27 +508,37 @@ async function shareCV() {
 
 
     <!-- =========================
-         NAME
+         HEADER
     ========================= -->
 
-    <div class="name">
+    <header class="header">
 
-        Lorenzo Rosso
+        <h1 class="name">
+            Lorenzo Rosso
+        </h1>
 
-    </div>
+
+        <div class="subtitle">
+
+            Corporate Finance &amp; Financial Markets
+
+        </div>
+
+    </header>
 
 
 
     <!-- =========================
-         EDUCATION
+         UNIVERSITY
     ========================= -->
 
     <section class="section">
 
+
         <div class="section-title">
 
             <span>
-                Education
+                University
             </span>
 
         </div>
@@ -608,25 +548,30 @@ async function shareCV() {
 
         <div class="education-entry">
 
-            <div class="education-title">
+            <div class="entry-title">
 
-                Master Degree (Laurea Magistrale) -
+                Master's Degree
+
+            </div>
+
+
+            <div class="entry-subtitle">
+
                 Corporate Finance &amp; Financial Markets (LM-77)
 
             </div>
 
 
-            <div class="education-details">
+            <div class="entry-subtitle">
 
-                School of Management and Economics,
                 Università degli Studi di Torino
 
             </div>
 
 
-            <div class="education-details">
+            <div class="entry-date">
 
-                September 2025 -- Present
+                September 2025 – Present
 
             </div>
 
@@ -637,410 +582,176 @@ async function shareCV() {
 
         <div class="education-entry">
 
-            <div class="education-title">
+            <div class="entry-title">
 
-                Bachelor Degree (Laurea Triennale) -
+                Bachelor's Degree
+
+            </div>
+
+
+            <div class="entry-subtitle">
+
                 Business Administration &amp; Management (L-18)
 
             </div>
 
 
-            <div class="education-details">
+            <div class="entry-subtitle">
 
-                School of Management and Economics,
                 Università degli Studi di Torino
 
             </div>
 
 
-            <div class="education-details">
+            <div class="entry-date">
 
                 September 2022 – July 2025
 
             </div>
 
 
-            <div class="education-achievement">
+            <div class="achievement">
 
-                Graduated with 110/110 cum Laude
-
-            </div>
-
-
-            <div class="thesis">
-
-                <span class="thesis-label">
-
-                    Thesis:
-
-                </span>
-
-
-                <a
-                    href="https://hdl.handle.net/20.500.14240/172897"
-                    target="_blank"
-                    rel="noopener"
-                >
-
-                    "Hostile Takeovers and Main Defense Mechanisms:
-                    Framework, Regulatory Aspects, and Distinctive Features"
-
-                </a>
-
-            </div>
-
-
-            <ul class="certificate-list">
-
-                <li>
-
-                    <a
-                        href="https://www.coursera.org/account/accomplishments/verify/WLKRKGLERBVU"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        Mergers and Acquisitions /
-                        University of Illinois Urbana-Champaign,
-                        Coursera (April 2024)
-
-                    </a>
-
-                </li>
-
-
-                <li>
-
-                    <a
-                        href="https://www.coursera.org/account/accomplishments/specialization/R7QIZXFWRSAQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        Private Equity and Venture Capital /
-                        Bocconi University,
-                        Coursera (October 2024)
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- HIGH SCHOOL -->
-
-        <div class="education-entry">
-
-            <div class="education-title">
-
-                High School - Traditional scientific diploma
-
-            </div>
-
-
-            <div class="education-details">
-
-                Liceo Scientifico “Maria Curie”
-                (scientific high-school)
-
-            </div>
-
-
-            <div class="education-details">
-
-                September 2016 – July 2021
+                110/110 cum Laude
 
             </div>
 
         </div>
+
+
+        <!-- UNIVERSITY EMAIL -->
+
+        <div class="contact">
+
+            <a href="mailto:lorenzo.rosso921@edu.unito.it">
+
+                lorenzo.rosso921@edu.unito.it
+
+            </a>
+
+        </div>
+
 
     </section>
 
 
 
     <!-- =========================
-         PROFESSIONAL EXPERIENCE
+         PROFESSIONAL
     ========================= -->
 
     <section class="section">
 
+
         <div class="section-title">
 
             <span>
-
-                Professional Experience
-
+                Professional
             </span>
 
         </div>
 
-
-        <!-- COMPANY -->
 
         <div class="company">
 
-            <span class="company-name">
 
-                <a
-                    href="https://www.corteco.com/"
-                    target="_blank"
-                    rel="noopener"
-                >
+            <div class="company-name">
 
-                    CORTECO
-
-                </a>
-
-                –
-
-                <a
-                    href="https://www.freudenberg.com/en"
-                    target="_blank"
-                    rel="noopener"
-                >
-
-                    Freudenberg Sealing Technologies
-
-                </a>
-
-            </span>
-
-            -
-
-            <span class="company-division">
-
-                Independent Automotive Aftermarket's
-                Division (B2B)
-
-            </span>
-
-        </div>
-
-
-        <!-- EXPERIENCE TIMELINE -->
-
-        <div class="experience-timeline">
-
-
-            <!-- CURRENT ROLE -->
-
-            <div class="experience-item current">
-
-                <div class="current-role">
-
-                    <div class="role-title">
-
-                        European Pricing &amp; Product Manager
-
-                    </div>
-
-
-                    <div class="role-location">
-
-                        Pinerolo (TO), Italian Office
-
-                    </div>
-
-
-                    <div class="role-date">
-
-                        April 2026 -- Present
-
-                    </div>
-
-
-                    <div class="role-description">
-
-                        Pricing Model, Analysis Tool &amp; KPI Deployment,
-                        alongside sales support and reporting activities.
-
-                    </div>
-
-
-                    <div class="assignment">
-
-                        <strong>
-
-                            6 Week International Assignment -
-                            French Branch (April to June 2026)
-
-                        </strong>
-
-                    </div>
-
-                </div>
+                Corteco S.r.l.
 
             </div>
 
 
-            <!-- PRODUCT MANAGEMENT SUPPORT -->
+            <div class="company-brand">
 
-            <div class="experience-item">
-
-                <div class="previous-role">
-
-                    <span class="previous-role-title">
-
-                        Product Management Support
-
-                    </span>
-
-                    <br>
-
-                    May 2025 – March 2026
-
-
-                    <div class="previous-role-description">
-
-                        Pricing Model Development alongside
-                        sales support and reporting activities
-
-                    </div>
-
-
-                    <div class="green-belt">
-
-                        Green Belt – Lean Administration
-                        (February 2026)
-
-                    </div>
-
-                </div>
+                a brand of Freudenberg
 
             </div>
 
 
-            <!-- EXTRACURRICULAR INTERNSHIP -->
+            <div class="professional-role">
 
-            <div class="experience-item">
-
-                <div class="previous-role">
-
-                    <span class="previous-role-title">
-
-                        Product Management – Extracurricular Internship
-
-                    </span>
-
-                    <br>
-
-                    November 2024 – May 2025
-
-                </div>
+                European Pricing &amp; Product Manager
 
             </div>
 
 
-            <!-- CURRICULAR INTERNSHIP -->
+            <div class="professional-location">
 
-            <div class="experience-item">
+                Pinerolo (TO) · Italian Office
 
-                <div class="previous-role">
+            </div>
 
-                    <span class="previous-role-title">
 
-                        Curricular Internship
+            <div class="professional-date">
 
-                    </span>
-
-                    <br>
-
-                    September 2024 – November 2024
-
-                </div>
+                April 2026 – Present
 
             </div>
 
 
         </div>
+
+
+        <!-- PROFESSIONAL EMAIL -->
+
+        <div class="contact">
+
+            <a href="mailto:lorenzo.rosso@corteco.it">
+
+                lorenzo.rosso@corteco.it
+
+            </a>
+
+        </div>
+
 
     </section>
 
 
 
     <!-- =========================
-         LANGUAGES
+         V CARD / QR
     ========================= -->
 
-    <section class="section">
+    <section class="qr-section">
 
-        <div class="section-title">
 
-            <span>
+        <button
+            class="qr-button"
+            type="button"
+            onclick="toggleQRCode()"
+        >
 
-                Languages
+            Add to Contacts
 
-            </span>
+        </button>
+
+
+        <div
+            id="qr-container"
+            class="qr-container"
+        >
+
+            <div id="qrcode"></div>
+
+
+            <div class="qr-description">
+
+                Scan this QR code with your phone camera
+                to add Lorenzo Rosso to your contacts.
+
+            </div>
 
         </div>
 
-
-        <div class="languages">
-
-
-            <div class="language">
-
-                <strong>
-
-                    English
-
-                </strong>
-
-                <span class="language-details">
-
-                    - B2, Cambridge First-level Certificate,
-                    ID: 950964YHN (October 2020)
-
-                </span>
-
-            </div>
-
-
-            <div class="language">
-
-                <strong>
-
-                    French
-
-                </strong>
-
-                <span class="language-details">
-
-                    - A2, Basic Proficiency
-
-                </span>
-
-            </div>
-
-
-            <div class="language">
-
-                <strong>
-
-                    Italian
-
-                </strong>
-
-                <span class="language-details">
-
-                    - Native Language
-
-                </span>
-
-            </div>
-
-
-        </div>
 
     </section>
 
 
 
     <!-- =========================
-         DOWNLOAD CV
+         CV DOWNLOADS
     ========================= -->
 
     <div class="download-container">
@@ -1055,15 +766,11 @@ async function shareCV() {
         >
 
             <span class="cv-name">
-
                 CV
-
             </span>
 
             <span class="cv-download">
-
                 (Download)
-
             </span>
 
         </a>
@@ -1078,15 +785,11 @@ async function shareCV() {
         >
 
             <span class="cv-name">
-
                 CV Short
-
             </span>
 
             <span class="cv-download">
-
                 (Download)
-
             </span>
 
         </a>
@@ -1108,7 +811,176 @@ async function shareCV() {
     </div>
 
 
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <div class="footer">
+
+        Lorenzo Rosso
+
+    </div>
+
+
 </div>
+
+
+
+<script>
+
+
+/* =========================
+   V CARD DATA
+========================= */
+
+const vCardData =
+`BEGIN:VCARD
+VERSION:3.0
+N:Rosso;Lorenzo;;;
+FN:Lorenzo Rosso
+TITLE:European Pricing & Product Manager
+ORG:Corteco S.r.l.;Freudenberg
+EMAIL;TYPE=WORK:lorenzo.rosso@corteco.it
+EMAIL;TYPE=INTERNET:lorenzo.rosso921@edu.unito.it
+URL:https://lorenzo-rosso.github.io
+NOTE:Corporate Finance & Financial Markets
+END:VCARD`;
+
+
+
+/* =========================
+   QR CODE
+========================= */
+
+let qrGenerated = false;
+
+
+function toggleQRCode() {
+
+    const container =
+        document.getElementById("qr-container");
+
+
+    if (
+        container.classList.contains("visible")
+    ) {
+
+        container.classList.remove("visible");
+
+        return;
+
+    }
+
+
+    container.classList.add("visible");
+
+
+    if (!qrGenerated) {
+
+        new QRCode(
+            document.getElementById("qrcode"),
+            {
+                text: vCardData,
+
+                width: 220,
+
+                height: 220,
+
+                colorDark: "#000000",
+
+                colorLight: "#ffffff",
+
+                correctLevel:
+                    QRCode.CorrectLevel.M
+            }
+        );
+
+
+        qrGenerated = true;
+
+    }
+
+}
+
+
+
+/* =========================
+   SHARE CV
+========================= */
+
+async function shareCV() {
+
+    try {
+
+        const response =
+            await fetch("cv.pdf");
+
+
+        const blob =
+            await response.blob();
+
+
+        const file =
+            new File(
+                [blob],
+                "Lorenzo_Rosso_CV.pdf",
+                {
+                    type: "application/pdf"
+                }
+            );
+
+
+        if (
+            navigator.share &&
+            navigator.canShare &&
+            navigator.canShare({
+                files: [file]
+            })
+        ) {
+
+            await navigator.share({
+
+                title:
+                    "Lorenzo Rosso - CV",
+
+                text:
+                    "Lorenzo Rosso - Curriculum Vitae",
+
+                files: [file]
+
+            });
+
+        } else {
+
+            window.location.href =
+                "cv.pdf";
+
+        }
+
+    } catch (error) {
+
+        if (
+            error.name !==
+            "AbortError"
+        ) {
+
+            console.error(
+                "Unable to share CV:",
+                error
+            );
+
+
+            window.location.href =
+                "cv.pdf";
+
+        }
+
+    }
+
+}
+
+</script>
 
 
 </body>
