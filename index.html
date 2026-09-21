@@ -426,6 +426,77 @@
 
 </head>
 
+<script>
+
+async function shareCV() {
+
+    try {
+
+        const response = await fetch("cv.pdf");
+
+        const blob = await response.blob();
+
+        const file = new File(
+            [blob],
+            "Lorenzo_Rosso_CV.pdf",
+            {
+                type: "application/pdf"
+            }
+        );
+
+
+        /*
+         * If the browser supports sharing files,
+         * open the native system share menu.
+         */
+
+        if (
+            navigator.share &&
+            navigator.canShare &&
+            navigator.canShare({
+                files: [file]
+            })
+        ) {
+
+            await navigator.share({
+                title: "Lorenzo Rosso - CV",
+                text: "Lorenzo Rosso - Curriculum Vitae",
+                files: [file]
+            });
+
+        } else {
+
+            /*
+             * Fallback for browsers that do not
+             * support file sharing.
+             */
+
+            window.location.href = "cv.pdf";
+
+        }
+
+    } catch (error) {
+
+        /*
+         * Ignore cancellation of the native
+         * share menu.
+         */
+
+        if (error.name !== "AbortError") {
+
+            console.error(
+                "Unable to share CV:",
+                error
+            );
+
+            window.location.href = "cv.pdf";
+        }
+
+    }
+
+}
+
+</script>
 
 <body>
 
@@ -861,20 +932,28 @@
     <div class="download-container">
 
         <a
-            class="download-button"
-            href="cv.pdf"
-            download="Lorenzo_Rosso_CV.pdf"
+        class="download-button"
+        href="cv.pdf"
+        download="Lorenzo_Rosso_CV.pdf"
         >
-            Download CV
+        Download CV
         </a>
 
         <a
-            class="download-button"
-            href="cv-short.pdf"
-            download="Lorenzo_Rosso_CV-Short.pdf"
+        class="download-button"
+        href="cv-short.pdf"
+        download="Lorenzo_Rosso_Short_CV.pdf"
         >
-            Download Short CV
+        Download Short CV
         </a>
+
+        <button
+        class="download-button"
+        type="button"
+        onclick="shareCV()"
+        >
+        Share CV
+        </button>
 
     </div>
 
